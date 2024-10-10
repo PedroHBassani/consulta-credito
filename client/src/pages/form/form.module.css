@@ -1,0 +1,23 @@
+.formPage {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+}
+
+.section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin: 8px 0;
+}
