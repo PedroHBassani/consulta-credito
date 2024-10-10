@@ -5,6 +5,12 @@ import ResultPage from "./pages/result";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [result, setResult] = useState("good");
+
+  const onResult = (result) => {
+    setPage("result");
+    setResult(result);
+  };
 
   return (
     <>
@@ -13,8 +19,8 @@ function App() {
         {page === "result" && <span>Resultado</span>}
       </header>
 
-      {page === "home" && <FormPage setPage={setPage} />}
-      {page === "result" && <ResultPage setPage={setPage} />}
+      {page === "home" && <FormPage onResult={(e) => onResult(e)} />}
+      {page === "result" && <ResultPage setPage={setPage} risk={result} />}
     </>
   );
 }

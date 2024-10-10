@@ -53,7 +53,7 @@ const verifyFormValues = (formValues, setError) => {
   return true;
 };
 
-const FormPage = () => {
+const FormPage = ({ onResult }) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -77,8 +77,9 @@ const FormPage = () => {
       return;
     }
     setLoading(true);
-    const risk = await requestRisk(formValues);
+    const response = await requestRisk(formValues);
     setLoading(false);
+    onResult(response.data.risk);
   };
 
   return (

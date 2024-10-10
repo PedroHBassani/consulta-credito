@@ -1,0 +1,53 @@
+.resultPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.resultPage img {
+  width: 200px;
+  margin-top: 50px;
+}
+
+.messageContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: black;
+  gap: 15px;
+}
+
+.categoryMessage {
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.creditMessage {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #909090;
+}
+
+.messageContainer button {
+  padding: 10px 20px;
+  background-color: #a500d3;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.messageContainer button:hover {
+  background-color: #6e008a;
+}
+
+.messageContainer button:focus {
+  outline: 2px solid #fff;
+}

@@ -19,7 +19,7 @@ const porpuse = {
   "vacation/others": "Férias/outros",
 };
 
-const requestRisk = (formValues) => {
+const requestRisk = async (formValues) => {
   const {
     idade,
     sexo,
@@ -32,7 +32,7 @@ const requestRisk = (formValues) => {
     contaCorrente,
   } = formValues;
 
-  const response = axios.post("http://localhost:5000/risk", {
+  const response = await axios.post("http://localhost:5000/risk", {
     idade,
     sexo,
     trabalho,
