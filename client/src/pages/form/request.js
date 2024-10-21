@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const URL = "http://127.0.0.1:5000";
+
 const accounts = {
   "Não Aplicado": "NA",
   Pouco: "little",
@@ -32,19 +34,21 @@ const requestRisk = async (formValues) => {
     contaCorrente,
   } = formValues;
 
-  const response = await axios.post("http://localhost:5000/risk", {
-    idade,
-    sexo,
-    trabalho,
-    valorCredito,
-    duracao,
-    finalidade,
-    moradia,
-    contaPoupanca: accounts[contaPoupanca],
-    contaCorrente: accounts[contaCorrente],
-  });
+  const body = {
+    Age: idade,
+    Sex: sexo,
+    Job: trabalho,
+    Housing: moradia,
+    "Saving accounts": accounts[contaPoupanca],
+    "Checking account": accounts[contaCorrente],
+    "Credit amount": valorCredito,
+    Duration: duracao,
+    Purpose: finalidade,
+  };
 
-  return response;
+  console.log(body);
+
+  return await axios.post(`${URL}/predict`, body);
 };
 
 export default requestRisk;
