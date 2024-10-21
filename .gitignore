@@ -1,4 +1,6 @@
 client/node_modules
 client/package-lock.json
-server/node_modules
-server/package-lock.json
+
+ia/__pycache__
+ia/credit_model.pkl
+ia/scaler.pkl

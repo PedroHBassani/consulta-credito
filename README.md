@@ -4,29 +4,50 @@
 
 Este projeto foi desenvolvido para a disciplina de ABEX VI, com objetivo de criar um sistema de consulta de crédito para verificar a confiabilidade de um cliente.
 
-## Tecnologias
+## Dataset
 
-- Python
-- React
+O dataset utilizado para treinamento do modelo de Machine Learning foi o [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credit).
+
+## Requisitos
+
+- Python 3.12.4
+- Node.js 18.17.1
 
 ## Instalação
 
-### Frontend
+1. Clone o repositório:
 
-```bash
-cd client
-npm install
-npm run build
-npm start
-```
+   ```sh
+   git clone https://github.com/PedroHBassani/consulta-credito
+   cd consulta-credito
+   ```
 
-### Backend
+2. Frontend:
 
-```bash
-cd server
-pip install -r requirements.txt
-python app.py
-```
+   ```sh
+   cd client
+   npm install
+   npm run start
+   ```
+
+3. Backend:
+
+   ```sh
+   cd ia
+   py -m pip install -r requirements.txt
+   ```
+
+4. Treine o modelo:
+
+   ```sh
+    py model.py
+   ```
+
+5. Execute o backend:
+
+   ```sh
+   py app.py
+   ```
 
 ## Autores
 
