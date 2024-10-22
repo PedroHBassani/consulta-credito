@@ -10,15 +10,30 @@ const accounts = {
   "Bastante Rico": "quite rich",
 };
 
+const sex = {
+  masculino: "male",
+  feminino: "female",
+};
+
 const porpuse = {
-  car: "Carro",
-  business: "Negócio",
-  "radio/TV": "Rádio/TV",
-  "furniture/equipment": "Móveis/equipamentos",
-  education: "Educação",
-  "domestic appliances": "Eletrodomésticos",
-  repairs: "Reparos",
-  "vacation/others": "Férias/outros",
+  Carro: "car",
+  Negócio: "business",
+  "Rádio/TV": "radio/TV",
+  "Móveis/equipamentos": "furniture/equipment",
+  Educação: "education",
+  Eletrodomésticos: "domestic appliances",
+  Reparos: "repairs",
+  "Férias/outros": "vacation/others",
+};
+
+const housing = {
+  Própria: "own",
+  Alugada: "rent",
+  Cedido: "free",
+};
+
+const toInt = (value) => {
+  return parseInt(value);
 };
 
 const requestRisk = async (formValues) => {
@@ -35,15 +50,15 @@ const requestRisk = async (formValues) => {
   } = formValues;
 
   const body = {
-    Age: idade,
-    Sex: sexo,
-    Job: trabalho,
-    Housing: moradia,
+    Age: toInt(idade),
+    Sex: sex[sexo],
+    Job: toInt(trabalho),
+    Housing: housing[moradia],
     "Saving accounts": accounts[contaPoupanca],
     "Checking account": accounts[contaCorrente],
-    "Credit amount": valorCredito,
-    Duration: duracao,
-    Purpose: finalidade,
+    "Credit amount": toInt(valorCredito),
+    Duration: toInt(duracao),
+    Purpose: porpuse[finalidade],
   };
 
   console.log(body);
