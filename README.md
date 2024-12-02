@@ -6,11 +6,7 @@ Este projeto foi desenvolvido para a disciplina de ABEX VI, com objetivo de cria
 
 ## Dataset
 
-<<<<<<< HEAD
 O dataset utilizado para treinamento do modelo de Machine Learning foi o [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credit).
-=======
-O dataset utilizado para treinamento do modelo de Machine Learning foi o [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credit). 
->>>>>>> 4dba6a919add3d7badb7475902eb543c10a7cc51
 E disponível [aqui](https://www.kaggle.com/code/abdullahmazari/credit-card-risk-prediction) com o risco.
 
 ## Requisitos
