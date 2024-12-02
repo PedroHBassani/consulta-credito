@@ -22,8 +22,6 @@ const images = {
 };
 
 const ResultPage = ({ risk, setPage }) => {
-  console.log(risk);
-
   return (
     <div className={styles.resultPage}>
       <div className={styles.image}>{images[risk]}</div>

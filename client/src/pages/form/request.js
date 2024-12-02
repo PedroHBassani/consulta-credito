@@ -11,8 +11,8 @@ const accounts = {
 };
 
 const sex = {
-  masculino: "male",
-  feminino: "female",
+  Masculino: "male",
+  Feminino: "female",
 };
 
 const porpuse = {
@@ -24,6 +24,13 @@ const porpuse = {
   Eletrodomésticos: "domestic appliances",
   Reparos: "repairs",
   "Férias/outros": "vacation/others",
+};
+
+const jobs = {
+  "sem qualificação e não residente": 0,
+  "sem qualificação e residente": 1,
+  qualificado: 2,
+  "altamente qualificado": 3,
 };
 
 const housing = {
@@ -52,7 +59,7 @@ const requestRisk = async (formValues) => {
   const body = {
     Age: toInt(idade),
     Sex: sex[sexo],
-    Job: toInt(trabalho),
+    Job: toInt(jobs[trabalho]),
     Housing: housing[moradia],
     "Saving accounts": accounts[contaPoupanca],
     "Checking account": accounts[contaCorrente],

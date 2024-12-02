@@ -24,6 +24,13 @@ const porpuseOptions = [
   "Férias/outros",
 ];
 
+const jobs = [
+  "sem qualificação e não residente",
+  "sem qualificação e residente",
+  "qualificado",
+  "altamente qualificado",
+];
+
 const verifyFormValues = (formValues, setError) => {
   if (formValues.idade === "") {
     setError("Preencha a idade");
@@ -58,14 +65,14 @@ const FormPage = ({ onResult }) => {
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     idade: "",
-    sexo: "",
-    trabalho: "",
+    sexo: "Masculino",
+    trabalho: "sem qualificação e não residente",
     valorCredito: "",
     duracao: "",
-    finalidade: "",
-    moradia: "",
-    contaPoupanca: "",
-    contaCorrente: "",
+    finalidade: "Carro",
+    moradia: "Própria",
+    contaPoupanca: "Não Aplicado",
+    contaCorrente: "Não Aplicado",
   });
 
   const handleChange = (field, value) => {
@@ -100,10 +107,10 @@ const FormPage = ({ onResult }) => {
             options={["Masculino", "Feminino"]}
           />
           <SelectField
-            title="Trabalho"
+            title="Fontes de renda"
             value={formValues.trabalho}
             onChange={(e) => handleChange("trabalho", e.target.value)}
-            options={[0, 1, 2, 3]}
+            options={jobs}
           />
         </div>
         <div className={styles.section}>
